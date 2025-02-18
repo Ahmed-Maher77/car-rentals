@@ -14,6 +14,9 @@ A simple and responsive landing page for a car rental service. This project is b
 - **CSS** – Styling and responsiveness
 - **JavaScript** – Interactivity and animations
 
+## 👀 Live Preview:
+click here: <a href="https://ahmed-maher77.github.io/car-rentals/" title="Live Preview">https://ahmed-maher77.github.io/car-rentals/</a>
+
 ## 📸 Preview
 <a href="website-url" title="demo">
   <img src="uploaded-img-on-github-readme" alt="website preview" width="300">
