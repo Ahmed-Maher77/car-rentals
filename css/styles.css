@@ -367,6 +367,7 @@ input {
 		display: flex !important;
 		justify-content: flex-end;
 		margin-top: 0;
+		height: auto;
 	}
 	.mobile-nav span {
 		display: none;
