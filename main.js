@@ -449,6 +449,137 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	);
 
+	// Car Selection Section Animation
+	gsap.fromTo(
+		"#sec-4 header",
+		{
+			opacity: 0,
+			y: 50,
+			duration: 0,
+		},
+		{
+			opacity: 1,
+			y: 0,
+			duration: 0.8,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: "#sec-4",
+				start: "top 80%",
+				end: "bottom 20%",
+				toggleActions: "play none none reverse",
+			},
+		}
+	);
+
+	gsap.fromTo(
+		"#sec-4 .car-details",
+		{
+			opacity: 0,
+			x: -100,
+			duration: 0,
+		},
+		{
+			opacity: 1,
+			x: 0,
+			duration: 1,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: "#sec-4",
+				start: "top 80%",
+				end: "bottom 20%",
+				toggleActions: "play none none reverse",
+			},
+		}
+	);
+
+	gsap.fromTo(
+		"#sec-4 .car-image",
+		{
+			opacity: 0,
+			x: 100,
+			duration: 0,
+		},
+		{
+			opacity: 1,
+			x: 0,
+			duration: 1,
+			ease: "power2.out",
+			delay: 0.3,
+			scrollTrigger: {
+				trigger: "#sec-4",
+				start: "top 80%",
+				end: "bottom 20%",
+				toggleActions: "play none none reverse",
+			},
+		}
+	);
+
+	// Support Section Animation
+	gsap.fromTo(
+		"#sec-5 .support-content",
+		{
+			opacity: 0,
+			y: 50,
+			duration: 0,
+		},
+		{
+			opacity: 1,
+			y: 0,
+			duration: 1,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: "#sec-5",
+				start: "top 80%",
+				end: "bottom 20%",
+				toggleActions: "play none none reverse",
+			},
+		}
+	);
+
+	// Blog Section Animation
+	gsap.fromTo(
+		"#sec-6 header",
+		{
+			opacity: 0,
+			y: 50,
+			duration: 0,
+		},
+		{
+			opacity: 1,
+			y: 0,
+			duration: 0.8,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: "#sec-6",
+				start: "top 80%",
+				end: "bottom 20%",
+				toggleActions: "play none none reverse",
+			},
+		}
+	);
+
+	gsap.fromTo(
+		"#sec-6 .blog-card",
+		{
+			opacity: 0,
+			y: 60,
+			duration: 0,
+		},
+		{
+			opacity: 1,
+			y: 0,
+			duration: 0.8,
+			stagger: 0.2,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: "#sec-6",
+				start: "top 70%",
+				end: "bottom 20%",
+				toggleActions: "play none none reverse",
+			},
+		}
+	);
+
 	// Footer Animation
 	gsap.fromTo(
 		"footer .footer-content",
@@ -646,6 +777,197 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	});
+
+	// Car Slider Functionality
+	const carData = [
+		{
+			title: "Audi 3000 msi",
+			price: "$149/day",
+			description: "Experience luxury and performance with our premium Audi model. Perfect for business trips or special occasions.",
+			capacity: "Capacity: 04 Person",
+			doors: "Doors: 4",
+			ac: "Air Condition: Dual Zone",
+			transmission: "Transmission: Automatic",
+			image: "images/car.jpg",
+			alt: "Audi 3000 msi"
+		},
+		{
+			title: "BMW X5 Luxury",
+			price: "$199/day",
+			description: "Premium SUV with advanced technology and spacious interior. Ideal for family trips and luxury travel.",
+			capacity: "Capacity: 07 Person",
+			doors: "Doors: 5",
+			ac: "Air Condition: Triple Zone",
+			transmission: "Transmission: Automatic",
+			image: "images/b1.jpg",
+			alt: "BMW X5 Luxury"
+		},
+		{
+			title: "Mercedes C-Class",
+			price: "$179/day",
+			description: "Elegant sedan with superior comfort and cutting-edge features. Perfect for executive travel and daily commuting.",
+			capacity: "Capacity: 05 Person",
+			doors: "Doors: 4",
+			ac: "Air Condition: Dual Zone",
+			transmission: "Transmission: Automatic",
+			image: "images/b2.jpg",
+			alt: "Mercedes C-Class"
+		}
+	];
+
+	let currentCarIndex = 0;
+
+	function updateCarDisplay(index) {
+		const car = carData[index];
+		
+		// Update car details with animation
+		gsap.to("#car-title", {
+			duration: 0.3,
+			opacity: 0,
+			y: -20,
+			onComplete: () => {
+				document.getElementById("car-title").textContent = car.title;
+				gsap.to("#car-title", {
+					duration: 0.3,
+					opacity: 1,
+					y: 0
+				});
+			}
+		});
+
+		gsap.to("#car-price", {
+			duration: 0.3,
+			opacity: 0,
+			scale: 0.8,
+			onComplete: () => {
+				document.getElementById("car-price").textContent = car.price;
+				gsap.to("#car-price", {
+					duration: 0.3,
+					opacity: 1,
+					scale: 1
+				});
+			}
+		});
+
+		gsap.to("#car-description", {
+			duration: 0.3,
+			opacity: 0,
+			y: 20,
+			onComplete: () => {
+				document.getElementById("car-description").textContent = car.description;
+				gsap.to("#car-description", {
+					duration: 0.3,
+					opacity: 1,
+					y: 0
+				});
+			}
+		});
+
+		// Update car features
+		gsap.to("#car-capacity", {
+			duration: 0.2,
+			opacity: 0,
+			onComplete: () => {
+				document.getElementById("car-capacity").textContent = car.capacity;
+				gsap.to("#car-capacity", { duration: 0.2, opacity: 1 });
+			}
+		});
+
+		gsap.to("#car-doors", {
+			duration: 0.2,
+			opacity: 0,
+			delay: 0.1,
+			onComplete: () => {
+				document.getElementById("car-doors").textContent = car.doors;
+				gsap.to("#car-doors", { duration: 0.2, opacity: 1 });
+			}
+		});
+
+		gsap.to("#car-ac", {
+			duration: 0.2,
+			opacity: 0,
+			delay: 0.2,
+			onComplete: () => {
+				document.getElementById("car-ac").textContent = car.ac;
+				gsap.to("#car-ac", { duration: 0.2, opacity: 1 });
+			}
+		});
+
+		gsap.to("#car-transmission", {
+			duration: 0.2,
+			opacity: 0,
+			delay: 0.3,
+			onComplete: () => {
+				document.getElementById("car-transmission").textContent = car.transmission;
+				gsap.to("#car-transmission", { duration: 0.2, opacity: 1 });
+			}
+		});
+
+		// Update car image with fade effect
+		gsap.to("#car-image", {
+			duration: 0.4,
+			opacity: 0,
+			scale: 0.9,
+			onComplete: () => {
+				document.getElementById("car-image").src = car.image;
+				document.getElementById("car-image").alt = car.alt;
+				gsap.to("#car-image", {
+					duration: 0.4,
+					opacity: 1,
+					scale: 1
+				});
+			}
+		});
+
+		// Update dots
+		document.querySelectorAll('.car-dots .dot').forEach((dot, i) => {
+			dot.classList.toggle('active', i === index);
+		});
+
+		currentCarIndex = index;
+	}
+
+	// Add click event listeners to dots
+	document.querySelectorAll('.car-dots .dot').forEach((dot, index) => {
+		dot.addEventListener('click', () => {
+			updateCarDisplay(index);
+		});
+	});
+
+	// Auto-slide functionality (optional)
+	let autoSlideInterval;
+	function startAutoSlide() {
+		autoSlideInterval = setInterval(() => {
+			const nextIndex = (currentCarIndex + 1) % carData.length;
+			updateCarDisplay(nextIndex);
+		}, 5000); // Change car every 5 seconds
+	}
+
+	function stopAutoSlide() {
+		if (autoSlideInterval) {
+			clearInterval(autoSlideInterval);
+		}
+	}
+
+	// Start auto-slide when section comes into view
+	const carSection = document.querySelector('#sec-4');
+	if (carSection) {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					startAutoSlide();
+				} else {
+					stopAutoSlide();
+				}
+			});
+		}, { threshold: 0.5 });
+
+		observer.observe(carSection);
+	}
+
+	// Pause auto-slide when user hovers over car section
+	carSection.addEventListener('mouseenter', stopAutoSlide);
+	carSection.addEventListener('mouseleave', startAutoSlide);
 
 	// Parallax effect removed to fix header visibility issues
 	// gsap.to("#sec-1", {
