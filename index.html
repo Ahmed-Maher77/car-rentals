@@ -2,30 +2,54 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-		<meta name="description" content="Car Rentals - Find and rent the best cars at affordable prices. Enjoy a seamless booking experience with our responsive and user-friendly platform." />
-		<meta name="keywords" content="car rentals, rent a car, affordable car rental, vehicle hire, car booking" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=5"
+		/>
+		<meta
+			name="description"
+			content="Car Rentals - Find and rent the best cars at affordable prices. Enjoy a seamless booking experience with our responsive and user-friendly platform."
+		/>
+		<meta
+			name="keywords"
+			content="car rentals, rent a car, affordable car rental, vehicle hire, car booking"
+		/>
 		<meta name="author" content="Ahmed Maher" />
-		
+
 		<!-- Open Graph / Facebook -->
-		<meta property="og:title" content="Car Rentals - Affordable & Reliable Car Hire" />
-		<meta property="og:description" content="Find and rent the best cars at affordable prices with a seamless booking experience." />
+		<meta
+			property="og:title"
+			content="Car Rentals - Affordable & Reliable Car Hire"
+		/>
+		<meta
+			property="og:description"
+			content="Find and rent the best cars at affordable prices with a seamless booking experience."
+		/>
 		<meta property="og:image" content="./images/logo.png" />
-		<meta property="og:url" content="https://ahmed-maher77.github.io/car-rentals/" />
+		<meta
+			property="og:url"
+			content="https://ahmed-maher77.github.io/car-rentals/"
+		/>
 		<meta property="og:type" content="website" />
-		
+
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="./images/logo.png" />
-		<meta name="twitter:title" content="Car Rentals - Affordable & Reliable Car Hire" />
-		<meta name="twitter:description" content="Find and rent the best cars at affordable prices with a seamless booking experience." />
+		<meta
+			name="twitter:title"
+			content="Car Rentals - Affordable & Reliable Car Hire"
+		/>
+		<meta
+			name="twitter:description"
+			content="Find and rent the best cars at affordable prices with a seamless booking experience."
+		/>
 		<meta name="twitter:image" content="./images/logo.png" />
-	
+
 		<title>Car Rentals - Affordable & Reliable Car Hire</title>
-		
+
 		<link href="css/all.css" type="text/css" rel="stylesheet" />
 		<link href="css/styles.css" type="text/css" rel="stylesheet" />
 	</head>
-	
+
 	<body>
 		<header>
 			<div class="container">
@@ -35,10 +59,10 @@
 				</div>
 				<nav class="desktop-nav">
 					<a href="index.html">Home</a>
-					<a href="About.html">About</a>
-					<a href="Cars.html">Cars</a>
-					<a href="Service.html">Service</a>
-					<a href="Contact.html">Contact</a>
+					<a href="#sec-2">About</a>
+					<a href="#sec-3">Cars</a>
+					<a href="#sec-2">Service</a>
+					<a href="#sec-5">Contact</a>
 				</nav>
 			</div>
 		</header>
@@ -49,29 +73,76 @@
 					<h4>The royal essence of jurney</h4>
 					<h2>Relaxed Journey Ever</h2>
 					<p>
-						Randomly selected by our team, this iconic luxury car is perfect for your relaxed and unwinding journey. Experience the ultimate luxury in everyday life.
+						Randomly selected by our team, this iconic luxury car is
+						perfect for your relaxed and unwinding journey.
+						Experience the ultimate luxury in everyday life.
 					</p>
-					<a href="javascript:;" class="btn btn-yellow">Rent Car now</a>
+					<a
+						href="javascript:;"
+						class="btn btn-yellow"
+						onclick="document.getElementById('rental-form').name.focus()"
+						>Rent Car now</a
+					>
 				</aside>
-				<form action="data.php" method="post">
+				<form action="data.php" method="post" id="rental-form">
 					<h3>Book your car today!</h3>
-					<select name="">
+					<select name="car" required>
 						<option value="0">Select Your Car</option>
+						<option value="economy">Economy Car</option>
+						<option value="compact">Compact Car</option>
+						<option value="midsize">Midsize Car</option>
+						<option value="fullsize">Full Size Car</option>
+						<option value="luxury">Luxury Car</option>
+						<option value="suv">SUV</option>
+						<option value="van">Van</option>
 					</select>
 
-					<select name="">
+					<select name="pickup" required>
 						<option value="0">Pick up</option>
+						<option value="airport">Airport</option>
+						<option value="downtown">Downtown Office</option>
+						<option value="hotel">Hotel Pickup</option>
+						<option value="home">Home Address</option>
 					</select>
-					<input type="text" placeholder="Date & time" />
+					<input
+						type="datetime-local"
+						name="pickup_datetime"
+						placeholder="Date & time"
+						required
+					/>
 
-					<select name="">
+					<select name="dropoff" required>
 						<option value="0">Drop off</option>
+						<option value="airport">Airport</option>
+						<option value="downtown">Downtown Office</option>
+						<option value="hotel">Hotel Dropoff</option>
+						<option value="home">Home Address</option>
 					</select>
-					<input type="text" placeholder="Date & time" />
+					<input
+						type="datetime-local"
+						name="dropoff_datetime"
+						placeholder="Date & time"
+						required
+					/>
 
-					<input type="text" placeholder="Your Name" />
-					<input type="text" placeholder="Email Address" />
-					<input type="text" placeholder="Phone Number" />
+					<input
+						type="text"
+						name="name"
+						placeholder="Your Name"
+						required
+					/>
+					<input
+						type="email"
+						name="email"
+						placeholder="Email Address"
+						required
+					/>
+					<input
+						type="tel"
+						name="phone"
+						placeholder="Phone Number"
+						required
+					/>
 
 					<button type="submit" class="btn btn-yellow">
 						Confirm Car booking
@@ -83,62 +154,80 @@
 		<section id="sec-2">
 			<header class="container">
 				<h2>What services we offer to our clients</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<p>Comprehensive car rental solutions tailored to your needs</p>
 			</header>
 
 			<div class="container">
 				<article>
-					<h3><img src="images/icons/ico1.jpg" alt="" />Expert Technicains</h3>
+					<h3>
+						<img src="images/icons/ico1.jpg" alt="" />Expert
+						Technicians
+					</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sed
-						quidem accusantium at aspernatur! Ex excepturi non mollitia ullam
-						labore necessitatibus, quibusdam. Odio sint voluptas impedit non,
-						dolores, in dolorum.
+						Our certified technicians ensure all vehicles are
+						maintained to the highest standards. Regular inspections
+						and preventive maintenance guarantee your safety and
+						vehicle reliability throughout your rental period.
 					</p>
 				</article>
 				<article>
-					<h3><img src="images/icons/ico2.jpg" alt="" />Expert Technicains</h3>
+					<h3>
+						<img src="images/icons/ico2.jpg" alt="" />24/7 Roadside
+						Assistance
+					</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sed
-						quidem accusantium at aspernatur! Ex excepturi non mollitia ullam
-						labore necessitatibus, quibusdam. Odio sint voluptas impedit non,
-						dolores, in dolorum.
+						Travel with peace of mind knowing our 24/7 roadside
+						assistance is always available. From flat tires to
+						mechanical issues, our dedicated team responds quickly
+						to ensure your journey continues smoothly.
 					</p>
 				</article>
 				<article>
-					<h3><img src="images/icons/ico3.jpg" alt="" />Expert Technicains</h3>
+					<h3>
+						<img src="images/icons/ico3.jpg" alt="" />Flexible
+						Pickup & Drop-off
+					</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sed
-						quidem accusantium at aspernatur! Ex excepturi non mollitia ullam
-						labore necessitatibus, quibusdam. Odio sint voluptas impedit non,
-						dolores, in dolorum.
+						Convenient pickup and drop-off locations including
+						airports, hotels, and our downtown offices. We also
+						offer home delivery service for added convenience.
+						Choose what works best for your schedule.
 					</p>
 				</article>
 				<article>
-					<h3><img src="images/icons/ico4.jpg" alt="" />Expert Technicains</h3>
+					<h3>
+						<img src="images/icons/ico4.jpg" alt="" />Comprehensive
+						Insurance
+					</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sed
-						quidem accusantium at aspernatur! Ex excepturi non mollitia ullam
-						labore necessitatibus, quibusdam. Odio sint voluptas impedit non,
-						dolores, in dolorum.
+						Full coverage insurance options to protect you during
+						your rental. Our policies include collision damage
+						waiver, theft protection, and personal accident coverage
+						for complete peace of mind.
 					</p>
 				</article>
 				<article>
-					<h3><img src="images/icons/ico5.jpg" alt="" />Expert Technicains</h3>
+					<h3>
+						<img src="images/icons/ico5.jpg" alt="" />Wide Vehicle
+						Selection
+					</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sed
-						quidem accusantium at aspernatur! Ex excepturi non mollitia ullam
-						labore necessitatibus, quibusdam. Odio sint voluptas impedit non,
-						dolores, in dolorum.
+						From economy cars to luxury vehicles, SUVs to vans, we
+						offer a diverse fleet to meet every need. All vehicles
+						are regularly updated with the latest models and
+						features for your comfort and safety.
 					</p>
 				</article>
 				<article>
-					<h3><img src="images/icons/ico6.jpg" alt="" />Expert Technicains</h3>
+					<h3>
+						<img src="images/icons/ico6.jpg" alt="" />Competitive
+						Pricing
+					</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sed
-						quidem accusantium at aspernatur! Ex excepturi non mollitia ullam
-						labore necessitatibus, quibusdam. Odio sint voluptas impedit non,
-						dolores, in dolorum.
+						Transparent pricing with no hidden fees. We offer
+						competitive rates, seasonal discounts, and loyalty
+						programs. Book online for the best deals and instant
+						confirmation.
 					</p>
 				</article>
 			</div>
@@ -146,24 +235,138 @@
 
 		<section id="sec-3">
 			<div class="container">
-				<img src="images/about-img.jpg" alt="" />
+				<img src="images/about-img.jpg" alt="Car rental network" />
 				<header>
-					<h2>Globally Connected <span>By large network</span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<h2>
+						Nationwide Network <span>With Local Expertise</span>
+					</h2>
+					<p>Your trusted partner across the country</p>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-						magnam suscipit culpa velit ratione libero, error possimus non
-						aliquid voluptatibus nisi nemo nam quasi facilis, cum rerum quidem
-						voluptate doloremque optio molestias iusto veniam laboriosam maxime
-						eaque magni! Enim consequatur eligendi dolorum aspernatur officiis
-						aut unde totam id suscipit facilis.
+						With over 50 locations nationwide, we provide seamless
+						car rental services wherever your journey takes you. Our
+						extensive network ensures you can pick up and drop off
+						vehicles at any of our locations, making your travel
+						experience truly flexible and convenient. Each location
+						is staffed with local experts who know the area and can
+						provide personalized recommendations for your trip.
 					</p>
-					<a href="javascript:;" class="btn btn-yellow">Get Details</a>
+					<a
+						href="https://ahmedmaher-portfolio.vercel.app"
+						target="_blank"
+						class="btn btn-yellow"
+						>View All Locations</a
+					>
 				</header>
 			</div>
 		</section>
 
+		<footer id="sec-5">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<img
+							src="images/logo.png"
+							alt="Car Rentals Logo"
+							class="footer-logo"
+						/>
+						<p>
+							Your trusted partner for reliable and affordable car
+							rentals. We provide exceptional service and quality
+							vehicles to make your journey memorable.
+						</p>
+						<div class="social-links">
+							<a
+								href="https://ahmedmaher-portfolio.vercel.app/"
+								target="_blank"
+								aria-label="Portfolio"
+								><i class="fa-solid fa-globe"></i
+							></a>
+							<a
+								href="https://www.linkedin.com/in/ahmed-maher-algohary"
+								target="_blank"
+								aria-label="LinkedIn"
+								><i class="fa-brands fa-linkedin-in"></i
+							></a>
+							<a
+								href="https://github.com/Ahmed-Maher77"
+								target="_blank"
+								aria-label="GitHub"
+								><i class="fa-brands fa-github"></i
+							></a>
+							<a
+								href="https://web.facebook.com/profile.php?id=100012154268952"
+								target="_blank"
+								aria-label="Facebook"
+								><i class="fa-brands fa-facebook-f"></i
+							></a>
+						</div>
+					</div>
 
+					<div class="footer-section">
+						<h4>Quick Links</h4>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#sec-2">About Us</a></li>
+							<li><a href="#sec-3">Our Fleet</a></li>
+							<li><a href="#sec-2">Services</a></li>
+							<li><a href="#sec-5">Contact</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>Our Services</h4>
+						<ul>
+							<li>Airport Pickup</li>
+							<li>Long-term Rentals</li>
+							<li>Luxury Vehicles</li>
+							<li>Business Rentals</li>
+							<li>24/7 Support</li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>Contact Info</h4>
+						<div class="contact-info">
+							<p>
+								<i class="fa-solid fa-phone"></i> +201150383416
+							</p>
+							<p>
+								<i class="fa-solid fa-envelope"></i>
+								ahmedmaher.dev1@gmail.com
+							</p>
+							<p>
+								<i class="fa-solid fa-location-dot"></i> Egypt,
+								Cairo
+							</p>
+							<p>
+								<i class="fa-solid fa-clock"></i> Mon-Sun: 24/7
+								Service
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<div class="footer-bottom-content">
+						<p>&copy; 2025 Car Rentals. All rights reserved.</p>
+						<div class="footer-links">
+							<p>
+								Developed by
+								<a
+									href="https://ahmedmaher-portfolio.vercel.app"
+									target="_blank"
+									>Ahmed Maher</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- GSAP CDN -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 		<script src="main.js"></script>
 	</body>
