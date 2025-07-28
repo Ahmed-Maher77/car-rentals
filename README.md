@@ -13,7 +13,7 @@ A professional, fully-featured car rental landing page built with modern web tec
 
 ## 📸 Preview:
 <a href="https://ahmed-maher77.github.io/car-rentals/" title="demo">
-  <img src="uploaded-img-on-github-readme" alt="website preview" 
+  <img src="https://github.com/user-attachments/assets/c9cc0bcd-d4b9-4531-bebc-120c458c3d7a" alt="website preview - UI Mockup" 
   width="300">
 </a>
 
