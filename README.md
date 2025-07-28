@@ -100,7 +100,7 @@ A professional, fully-featured car rental landing page built with modern web tec
     ```
 ---
 
-## 🎯 Performance Features
+<!-- ## 🎯 Performance Features
 
 -   **Optimized images** for fast loading
 -   **Minimal dependencies** for better performance
@@ -108,9 +108,9 @@ A professional, fully-featured car rental landing page built with modern web tec
 -   **Semantic HTML** for better SEO
 -   **Accessible design** with ARIA labels
 
----
+--- -->
 
-## 🤝 Contributing
+<!-- ## 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -118,7 +118,7 @@ A professional, fully-featured car rental landing page built with modern web tec
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
----
+--- -->
 
 ## 👨‍💻 Developer
 
